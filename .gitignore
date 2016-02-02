@@ -1,0 +1,23 @@
+void setup(){size(400, 400);
+
+smooth();}
+void draw(){
+ellipseMode(CENTER);
+rectMode(CENTER);
+
+background(255);
+noStroke();
+fill(351, 255, 26);
+rect(mouseX, mouseY, 75, 100); //body
+arc(mouseX, mouseY-45, 75, 75, PI, TWO_PI); //head
+
+fill(255);
+stroke(0);
+ellipse(mouseX-15, mouseY-45, 30, 30);//eyes
+ellipse(mouseX+15, mouseY-45, 30, 30);
+fill(0);
+ellipse(mouseX-10, mouseY-45, 14, 14);//eye balls
+ellipse(mouseX+10, mouseY-45, 14, 14);
+
+noFill();
+arc(mouseX, mouseY, 30, 30, HALF_PI, PI);}
