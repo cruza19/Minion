@@ -1,0 +1,47 @@
+//// SETUP: size
+size(600, 450);
+smooth();
+ellipseMode(CENTER);
+
+
+/// FRAME: scene, house, Minion
+/// SCENE: sky, grass, sun, house, creature at (x,y)
+{
+  background( 150,120,255 );              // Sky blue.
+  fill( 100,235,200 );                    // Grass
+  noStroke();
+  rectMode( CORNERS );
+  rect( 0,150, width,height ); 
+  
+  // House on horizon (150).
+  fill( 250,100,0 );                // Red
+  rect( 200,50, 350,150 );
+  triangle( 150,50, 350,50, 250,25 );
+}
+
+/// Minion
+rectMode(CENTER);
+noStroke();
+fill(351, 255, 26);
+rect(200,200,75,100); //body
+arc(200, 150, 75, 75, PI, TWO_PI); //head
+
+fill(255);
+stroke(0);
+ellipse(185, 150, 30, 30);//eyes
+ellipse(215, 150, 30, 30);
+fill(0);
+ellipse(190, 150, 14, 14);//eye balls
+ellipse(210, 150, 14, 14);
+
+noFill();
+arc(200, 200, 30, 30, HALF_PI, PI);
+
+/// MESSAGE
+{
+  fill(250, 250, 250);
+  text( "Proyect 1.", width/50,120 );
+  text( "I need help with triangles ='(", width/50,135 );
+  fill( 0,0,0 );
+  text( "Abel Cruz", 10,height-10 );
+}  
