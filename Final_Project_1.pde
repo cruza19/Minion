@@ -2,7 +2,7 @@
 
 //// float: setting the horizon and minion floating x, y.
 
-float nugX, nugY;
+
 float sunX, sunY;
 float xMin=200, yMin=200, dxMin=3, dyMin=2;
 float horizon;
@@ -10,7 +10,8 @@ float nugR;
 float nugG;
 float nugB;
 int score=1;
-
+float nugX=335; 
+float nugY=230;
 
 //// SETUP: size, parameters for the horizon size and window size
 void setup()
@@ -46,13 +47,12 @@ void scene()
   noStroke();
   rectMode( CORNER );
   rect( 0, horizon, width, height );
-  
 }
 
 
 // House on horizon (150).
 void setting()
-  /////House
+/////House
 
 { 
   fill( 250, 100, 0 );                // Orange
@@ -119,8 +119,8 @@ void setting()
 void sunmove()                        ///sun move
 {
   float sunset;
- 
-  
+
+
   if (sunX > width) {
     sunX=  0;
   }
