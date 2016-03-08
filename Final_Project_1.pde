@@ -28,7 +28,6 @@ void draw()
 {
   scene();
   sunmove();
-  sunshow();
   setting();  
   minmove();    // Don't forget to move it!
   minshow();
@@ -42,10 +41,12 @@ void draw()
 void scene()
 {
   background( 150, 120, 255 );              // Sky Purple.
+  sunshow();
   fill( 100, 235, 200 );                    // Mint
   noStroke();
   rectMode( CORNER );
   rect( 0, horizon, width, height );
+  
 }
 
 
@@ -117,11 +118,15 @@ void setting()
 
 void sunmove()                        ///sun move
 {
-  sunY=75;
+  float sunset;
+ 
+  
   if (sunX > width) {
     sunX=  0;
   }
-  sunX=  sunX + 1;
+  sunX=(sunX + 1);
+  sunset=(150 + cos(sunX*.009)*125);
+  sunY=(sunset);
 }
 //// Move Minion
 void minmove()
@@ -167,7 +172,7 @@ void minshow()
   eyes();
 
   noFill();
-  arc( xMin, yMin, 30, 30, HALF_PI, PI);
+  arc( xMin, yMin, 30, 30, HALF_PI, PI);  //mouth
 }
 
 void eyes()
